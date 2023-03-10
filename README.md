@@ -1,1 +1,1 @@
-# https://vasilisaprudius.github.io/cssBayan/cssBayan/index.html
+# https://vasilisaprudius.github.io/cssBayan/index.html
