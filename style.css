@@ -68,7 +68,7 @@ input {
     cursor: pointer;
     display: flex;
     justify-content: center;
-    transition: 1s ease-in; 
+    transition: 0.5s ease-in; 
 
 }
 
@@ -90,13 +90,13 @@ input {
 .bayan-input:checked ~ .mem {
     height: calc(150px + 180 * (100vw / 1920));
     width: calc(150px + 180 * (100vw / 1920));
-    transition: 1s ease-in; 
+    transition: 0.5s ease-in; 
 }
 
 .bayan-title:hover ~ .mem {
     height: calc(150px + 180 * (100vw / 1920));
     width: calc(150px + 180 * (100vw / 1920));
-    transition: 1s ease-in; 
+    transition: 0.5s ease-in; 
 }
 
 .bayan-item:hover .bayan-item-img {
@@ -104,7 +104,7 @@ input {
 
 }
 
-.bayan-input:checked  .bayan-item-img {
+.bayan-input:target + .bayan-item-img {
     transform: rotate(-225deg);
 
 }
@@ -119,6 +119,9 @@ input {
     width: inherit;
     justify-content: space-between;
     cursor: pointer;
+    font-family: 'Tilt Neon', sans-serif;
+    font-size: calc(8px + 25 * (100vw/1920));
+
 }
 
 .bayan-block:hover  .bayan-item-img {
