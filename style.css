@@ -22,18 +22,15 @@ main {
 }
 
 .bayan-header-block {
-    font-family: 'Tilt Neon', sans-serif;
-    font-size: 30px;
+    
 }
 
 .bayan-header {
     margin: 0;
+    font-family: 'Tilt Neon', sans-serif;
+    font-size: calc(15px + 25 * (100vw/1920))
 }
 
-.bayan-items-block {
-    font-family: 'Tilt Neon', sans-serif;
-    font-size: 1.2em;
-}
 
 .bayan-items-block {
 
@@ -45,12 +42,14 @@ main {
     flex-wrap: wrap;
     width: 100%;
     overflow: hidden;
+    transition: 2s ease-out;
 }
 
 .bayan-item-img {
     height: 20px;
     width: 20px;
     cursor: pointer;
+    display: none;
 }
 
 
@@ -69,40 +68,50 @@ input {
 
 .mem {
     display: none;
+    margin: 10px;
 }
+
 
 .bayan-text {
     display: block;
-    transition: 1s;
+    cursor: pointer;
+    font-family: 'Tilt Neon', sans-serif;
+    font-size: calc(8px + 25 * (100vw/1920));
+    
 }
 
-.bayan-text:hover {
+.bayan-title:hover {
     color: #2c41b6;
     cursor: pointer;
 }
 
-.bayan-input:checked + .mem {
+.bayan-input:checked ~ .mem {
+    display: flex;
+    justify-content: center;
+   
+}
+
+.bayan-title:hover ~ .mem {
     display: flex;
     height: 50vh;
     justify-content: center;
    
 }
 
-.bayan-input:hover + .mem {
-    display: flex;
-    height: 50vh;
-    justify-content: center;
-   
-}
-
-.bayan-input:checked + .bayan-item-img {
+.bayan-item.active + .bayan-item-img {
     transform: rotate(20deg);
-    
 
 }
+
+.bayan-item:hover  .bayan-item-img {
+    transform: rotate(45deg);
+
+}
+
 
 .mem-img {
-
+    height: calc(150px + 180 * (100vw / 1920));
+    width: calc(150px + 180 * (100vw / 1920));
 }
 
 .bayan-title {
@@ -110,5 +119,13 @@ input {
     align-items: center;
     width: inherit;
     justify-content: space-between;
+    cursor: pointer;
 }
 
+.bayan-block:hover  .bayan-item-img {
+    display: flex;
+}
+
+.bayan-input:checked ~ .bayan-title {
+    color: #2c41b6;
+}
