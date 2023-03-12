@@ -1,4 +1,7 @@
 
+p {
+    margin: 0;
+}
 
 body {
     background-color: #f5f5eb;
@@ -21,10 +24,6 @@ main {
     width: 65vw;
 }
 
-.bayan-header-block {
-    
-}
-
 .bayan-header {
     margin: 0;
     font-family: 'Tilt Neon', sans-serif;
@@ -32,17 +31,16 @@ main {
 }
 
 
-.bayan-items-block {
-
-}
 
 .bayan-item {
     display: flex;
+    align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
     width: 100%;
     overflow: hidden;
     transition: 2s ease-out;
+    cursor: pointer;
 }
 
 .bayan-item-img {
@@ -50,12 +48,9 @@ main {
     width: 20px;
     cursor: pointer;
     display: none;
+    transition: 0.5s cubic-bezier(0.15, 0.17, 0, 0.91);
 }
 
-
-hr {
-    
-}
 
 input {
   -webkit-appearance: none;
@@ -67,8 +62,14 @@ input {
 }
 
 .mem {
-    display: none;
-    margin: 10px;
+    width: 0;
+    height: 0;
+    margin: 4px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    transition: 1s ease-in; 
+
 }
 
 
@@ -85,33 +86,31 @@ input {
     cursor: pointer;
 }
 
+
 .bayan-input:checked ~ .mem {
-    display: flex;
-    justify-content: center;
-   
+    height: calc(150px + 180 * (100vw / 1920));
+    width: calc(150px + 180 * (100vw / 1920));
+    transition: 1s ease-in; 
 }
 
 .bayan-title:hover ~ .mem {
-    display: flex;
-    height: 50vh;
-    justify-content: center;
-   
-}
-
-.bayan-item.active + .bayan-item-img {
-    transform: rotate(20deg);
-
-}
-
-.bayan-item:hover  .bayan-item-img {
-    transform: rotate(45deg);
-
-}
-
-
-.mem-img {
     height: calc(150px + 180 * (100vw / 1920));
     width: calc(150px + 180 * (100vw / 1920));
+    transition: 1s ease-in; 
+}
+
+.bayan-item:hover .bayan-item-img {
+    transform: rotate(-225deg);
+
+}
+
+.bayan-input:checked  .bayan-item-img {
+    transform: rotate(-225deg);
+
+}
+
+.mem-img {
+    width: 100%;
 }
 
 .bayan-title {
