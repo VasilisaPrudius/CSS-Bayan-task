@@ -95,21 +95,10 @@ input {
     transition: 0.5s ease-in; 
 }
 
-.bayan-title:hover ~ .mem {
-    height: calc(150px + 180 * (100vw / 1920));
-    width: calc(150px + 180 * (100vw / 1920));
-    transition: 0.5s ease-in; 
-}
 
-.bayan-item:hover .bayan-item-img {
-    transform: rotate(-225deg);
 
-}
 
-.bayan-input:target + .bayan-item-img {
-    transform: rotate(-225deg);
 
-}
 
 .mem-img {
     width: 100%;
@@ -134,15 +123,25 @@ input {
     color: #2c41b6;
 }
 
+@media screen and (min-width: 822px) {
 
-@media screen and (max-width: 769px) {
+  .bayan-title:hover ~ .mem {
+    height: calc(150px + 180 * (100vw / 1920));
+    width: calc(150px + 180 * (100vw / 1920));
+    transition: 0.5s ease-in; 
+  }
+  
+  .bayan-item:hover .bayan-item-img {
+    transform: rotate(-225deg);
+
+  }
+}
+
+
+
+@media screen and (max-width: 820px) {
     body {
        cursor: none;
-    }
-
-    .bayan-title:hover ~ .mem {
-        height: 0;
-        width: 0;
     }
 
 
