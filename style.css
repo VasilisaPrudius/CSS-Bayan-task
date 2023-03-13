@@ -137,6 +137,13 @@ input {
 
 @media screen and (max-width: 769px) {
     body {
-       cursor: pointer;
+       cursor: none;
     }
+
+    .bayan-title:hover ~ .mem {
+        height: 0;
+        width: 0;
+    }
+
+
 }
