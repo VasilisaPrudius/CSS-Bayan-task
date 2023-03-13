@@ -1,0 +1,148 @@
+
+p {
+    margin: 0;
+}
+
+body {
+    background-color: #f5f5eb;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bayan-block {
+    width: 73vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.bayan-container{
+    width: 65vw;
+    margin: 0;
+}
+
+.bayan-header {
+    margin: 0;
+    font-family: 'Tilt Neon', sans-serif;
+    font-size: calc(15px + 25 * (100vw/1920))
+}
+
+
+
+.bayan-item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    overflow: hidden;
+    transition: 2s ease-out;
+    cursor: pointer;
+}
+
+.bayan-item-img {
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    display: none;
+    transition: 0.5s cubic-bezier(0.15, 0.17, 0, 0.91);
+}
+
+
+input {
+  -webkit-appearance: none;
+  appearance: none;
+
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.mem {
+    width: 0;
+    height: 0;
+    margin: 4px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    transition: 0.5s ease-in; 
+
+}
+
+
+.bayan-text {
+    display: block;
+    cursor: pointer;
+    font-family: 'Tilt Neon', sans-serif;
+    font-size: calc(8px + 25 * (100vw/1920));
+    
+}
+
+.bayan-title:hover {
+    color: #2c41b6;
+    cursor: pointer;
+}
+
+
+.bayan-input:checked ~ .mem {
+    height: calc(150px + 180 * (100vw / 1920));
+    width: calc(150px + 180 * (100vw / 1920));
+    transition: 0.5s ease-in; 
+}
+
+
+
+
+
+
+.mem-img {
+    width: 100%;
+}
+
+.bayan-title {
+    display: flex;
+    align-items: center;
+    width: inherit;
+    justify-content: space-between;
+    cursor: pointer;
+    font-family: 'Tilt Neon', sans-serif;
+    font-size: calc(8px + 25 * (100vw/1920));
+
+}
+
+.bayan-block:hover  .bayan-item-img {
+    display: flex;
+}
+
+.bayan-input:checked ~ .bayan-title {
+    color: #2c41b6;
+}
+
+@media screen and (min-width: 822px) {
+
+  .bayan-title:hover ~ .mem {
+    height: calc(150px + 180 * (100vw / 1920));
+    width: calc(150px + 180 * (100vw / 1920));
+    transition: 0.5s ease-in; 
+  }
+  
+  .bayan-item:hover .bayan-item-img {
+    transform: rotate(-225deg);
+
+  }
+}
+
+
+
+@media screen and (max-width: 820px) {
+    body {
+       cursor: none;
+    }
+
+
+}
