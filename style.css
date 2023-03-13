@@ -17,11 +17,13 @@ main {
     width: 73vw;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
+    
 }
 
 .bayan-container{
     width: 65vw;
+    margin: 0;
 }
 
 .bayan-header {
@@ -130,4 +132,11 @@ input {
 
 .bayan-input:checked ~ .bayan-title {
     color: #2c41b6;
+}
+
+
+@media screen and (max-width: 769px) {
+    body {
+       cursor: pointer;
+    }
 }
